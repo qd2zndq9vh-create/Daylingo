@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daylingo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Nunito', 'sans-serif'],
+            },
+            colors: {
+              'navy': {
+                DEFAULT: '#1B2A4A', 
+                light: '#2C3E63',
+                dark: '#0F1829',
+              },
+              'gold': {
+                DEFAULT: '#ffd700',
+                dark: '#d4af37',
+                light: '#ffe44d'
+              },
+              'ocean': {
+                DEFAULT: '#4cc9f0',
+                dark: '#4895ef',
+              },
+              'slate': {
+                 DEFAULT: '#8892b0',
+                 light: '#a8b2d1',
+                 lighter: '#e6f1ff'
+              },
+              'danger': {
+                DEFAULT: '#ef476f',
+                dark: '#d6336c'
+              }
+            },
+            backgroundImage: {
+              'dot-pattern': "radial-gradient(#cbd5e1 1px, transparent 1px)",
+            },
+            animation: {
+              'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+              'salute': 'salute 1s ease-in-out',
+              'wave-left': 'wave-left 1s ease-in-out infinite',
+              'wave-right': 'wave-right 1s ease-in-out infinite',
+              'pump': 'pump 0.8s ease-in-out infinite',
+              'float': 'float 6s ease-in-out infinite'
+            },
+            keyframes: {
+              shake: {
+                '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                '40%, 60%': { transform: 'translate3d(4px, 0, 0)' }
+              },
+              salute: {
+                '0%, 100%': { transform: 'rotate(0deg)' },
+                '50%': { transform: 'rotate(20deg) translateY(-5px)' }
+              },
+              'wave-left': {
+                '0%, 100%': { transform: 'rotate(-130deg)' },
+                '50%': { transform: 'rotate(-150deg)' }
+              },
+              'wave-right': {
+                '0%, 100%': { transform: 'rotate(130deg)' },
+                '50%': { transform: 'rotate(150deg)' }
+              },
+              'pump': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' }
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f8fafc;
+        background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      .bubble::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -10px;
+        width: 20px;
+        height: 20px;
+        background: inherit;
+        border-left: 2px solid rgba(136, 146, 176, 0.3);
+        border-bottom: 2px solid rgba(136, 146, 176, 0.3);
+        transform: rotate(45deg);
+        z-index: 0;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

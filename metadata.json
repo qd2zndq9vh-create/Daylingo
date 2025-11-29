@@ -1,0 +1,7 @@
+{
+  "name": "Daylingo",
+  "description": "A Duolingo-inspired language learning app powered by Google Gemini. Features dynamic lesson generation, gamification (hearts, XP), and AI voice synthesis.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
